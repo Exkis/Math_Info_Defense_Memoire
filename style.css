@@ -117,6 +117,240 @@ nav ul li a.active { text-decoration:underline; }
 .about h2 { color:#2980b9; margin-bottom:15px; }
 .about p { margin-bottom:10px; font-size:1.1em; line-height:1.5; }
 
+/* ================= MEMOIRES PAGE ================= */
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.memoire-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  padding: 20px;
+}
+
+.memoire-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 380px;
+}
+
+.memoire-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.memoire-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.memoire-card p {
+  font-size: 14px;
+  color: #444;
+  margin: 5px 0;
+}
+
+.memoire-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.memoire-actions a {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.details-btn {
+  background: #0077cc;
+  color: #fff;
+}
+
+.view-btn {
+  background: #28a745;
+  color: #fff;
+}
+
+.download-btn {
+  background: #ff9800;
+  color: #fff;
+}
+
+.memoire-actions a:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* ===== TABLEAU ===== */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-size: 14px;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background: #0077cc;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+table tr:hover {
+  background: #f1f5f9;
+  transition: 0.3s;
+}
+
+table td a.details-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+table td a.details-btn:hover {
+  background: #005fa3;
+}
+
+/* ===== RESPONSIVE TABLE ===== */
+@media (max-width: 768px) {
+  table th, table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+  table td a.details-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+/* ===== DÉTAILS ETUDIANT ===== */
+.etudiant-detail {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.etudiant-detail h2 {
+  font-size: 28px;
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.etudiant-detail p {
+  font-size: 16px;
+  color: #333;
+  margin: 8px 0;
+}
+
+/* ===== BLOC MISE EN VALEUR ===== */
+.etudiant-highlight {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.etudiant-highlight h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.etudiant-highlight p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ===== BOUTONS ACTION ===== */
+.etudiant-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.etudiant-actions a.view-btn,
+.etudiant-actions a.download-btn {
+  flex: 1;
+  text-align: center;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.etudiant-actions a.view-btn {
+  background: #28a745;
+}
+
+.etudiant-actions a.view-btn:hover {
+  background: #1e7e34;
+}
+
+.etudiant-actions a.download-btn {
+  background: #ff9800;
+}
+
+.etudiant-actions a.download-btn:hover {
+  background: #cc7a00;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .etudiant-actions {
+    flex-direction: column;
+  }
+}
+
+
+
 /* Footer */
 footer { text-align:center; margin-top:40px; color:#777; }
 

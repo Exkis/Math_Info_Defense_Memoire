@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - MemoirePro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="AcadéMémoires Logo">
+            <h1>DEFENSE MEMOIRES L3 MATH-INFO</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="memoires.html">Voir Mémoires</a></li>
+                <li><a href="tableau.html">Programme</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="contact.html" class="active">Contactez-nous</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- ===== SECTION CONTACT ===== -->
+  <section class="container">
+    <h1 class="page-title">Contactez-nous</h1>
+    <p class="page-subtitle">Pour toute question ou demande, envoyez-nous un message ci-dessous.</p>
+
+    <form action="https://formspree.io/f/TON_ID" method="POST" style="max-width:600px; margin:auto;">
+      <label>Nom</label>
+      <input type="text" name="name" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc;">
+
+      <label>Email</label>
+      <input type="email" name="email" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc;">
+
+      <label>Message</label>
+      <textarea name="message" rows="6" required style="width:100%; padding:10px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc;"></textarea>
+
+      <button type="submit" class="details-btn" style="width:100%; padding:12px; font-size:16px;">Envoyer</button>
+    </form>
+
+    <div style="text-align:center; margin-top:40px;">
+      <p><strong>Email :</strong> excellencekisengo000@gmail.com</p>
+      <p><strong>Téléphone :</strong> +243 822 074</p>
+      <p><strong>Adresse :</strong> Université de KIKWIT, Ville de KIKWIT, RDC</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 DEFENSE MEMOIRES L3 MATH-INFO - Tous droits réservés. DeezerCode</p>
+  </footer>
+</body>
+</html>

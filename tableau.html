@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEFENSE MEMOIRES L3 MATH-INFO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="AcadéMémoires Logo">
+            <h1>DEFENSE MEMOIRES L3 MATH-INFO</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="memoires.html">Voir Mémoires</a></li>
+                <li><a href="tableau.html" class="active">Programme</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="contact.html">Contactez-nous</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- ===== SECTION TABLEAU ===== -->
+  <section class="container">
+    <h1 class="page-title">Tableau des étudiants</h1>
+    <p class="page-subtitle">Consultez les étudiants, leurs sujets et directeurs.</p>
+
+    <!-- Filtre par professeur -->
+    <label for="professeur-filter">Filtrer par professeur :</label>
+    <select id="professeur-filter" style="padding:8px; margin:10px 0; border-radius:6px; border:1px solid #ccc;">
+      <option value="all">Tous les professeurs</option>
+      <option value="Professeur KAFUNDA">Professeur KAFUNDA</option>
+      <option value="Professeur TSHIMANGA Célestin">Professeur TSHIMANGA Célestin</option>
+    </select>
+
+    <div class="table-container">
+      <table id="etudiants-table">
+        <thead>
+          <tr>
+            <th>Étudiant</th>
+            <th>Sujet</th>
+            <th>Directeur</th>
+            <th>Détails</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-professeur="Professeur TSHIMANGA Célestin">
+            <td>Esther MBOMBO</td>
+            <td>Etude et conception d'une plateforme e-commerce pour la promotion des produits
+            et services locaux.</td>
+            <td>Professeur TSHIMANGA Célestin</td>
+            <td><a href="esther.html" class="details-btn">Voir Détails</a></td>
+          </tr>
+
+          <tr data-professeur="Professeur TSHIMANGA Célestin">
+            <td>Don MAPANGILA</td>
+            <td>Déploiement d'une application desktop pour la gestion des fidèles d'une
+            eglise. Cas de l'Eglise FIM</td>
+            <td>Professeur TSHIMANGA Célestin</td>
+            <td><a href="mapangila.html" class="details-btn">Voir Détails</a></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 DEFENSE MEMOIRES L3 MATH-INFO - Tous droits réservés. DeezerCode</p>
+  </footer>
+
+  <!-- ===== SCRIPT FILTRE ===== -->
+  <script>
+    const select = document.getElementById('professeur-filter');
+    const tableRows = document.querySelectorAll('#etudiants-table tbody tr');
+
+    select.addEventListener('change', () => {
+      const value = select.value;
+      tableRows.forEach(row => {
+        if(value === 'all' || row.dataset.professeur === value) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
