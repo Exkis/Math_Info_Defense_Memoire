@@ -14,6 +14,19 @@ nav ul li a.active { text-decoration:underline; }
 .filter { max-width:900px; margin:0 auto 20px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
 .filter input, .filter select { padding:8px 12px; border-radius:5px; border:1px solid #ccc; }
 
+.instruction{
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    background: #f0f8ff;
+    color: #333;
+    border-left: 5px solid #2980b9;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+}
+
 /* Liste des cartes étudiants */
 .memoire-list { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px; max-width:1000px; margin:0 auto; }
 .memoire-card { background:#fff; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); overflow:hidden; text-decoration:none; color:#333; transition:transform 0.2s, box-shadow 0.2s; display:flex; flex-direction:column; align-items:center; padding:15px; }
