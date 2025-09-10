@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEFENSE MEMOIRES L3 MATH-INFO</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="AcadéMémoires Logo">
+            <h1>DEFENSE MEMOIRES L3 MATH-INFO</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Filtres -->
+    <div class="filter">
+        <select id="professeur-filter">
+            <option value="">-- Filtrer par professeur --</option>
+            <option value="Dr. Martin">Dr. Martin</option>
+            <option value="Dr. Dupont">Dr. Dupont</option>
+            <option value="Professeur KAFUNDA">Professeur KAFUNDA</option>
+            <option value="Professeur TSHIMANGA">Professeur TSHIMANGA</option>
+            <!-- Ajouter d'autres professeurs -->
+        </select>
+
+        <select id="sujet-filter">
+            <option value="">-- Filtrer par sujet --</option>
+            <option value="Numérique et éducation">Numérique et éducation</option>
+            <option value="IA et apprentissage">IA et apprentissage</option>
+            <option value="Système d'information">Système d'information</option>
+            <option value="Base de données réparties">Base de données réparties</option>
+            <!-- Ajouter d'autres sujets -->
+        </select>
+    </div>
+
+    <!-- Liste des étudiants -->
+    <div class="memoire-list">
+        <a href="etudiants/ruphinette.html" class="memoire-card" data-professeur="Dr. Martin" data-sujet="Numérique et éducation">
+            <img src="images/ruphinette.jpg" alt="Ruphinette KISENGO">
+            <div class="card-content">
+                <h3>Ruphinette KISENGO</h3>
+            </div>
+        </a>
+
+        <a href="etudiants/ruphinette.html" class="memoire-card" data-professeur="Professeur TSHIMANGA" data-sujet="IA et apprentissage">
+            <img src="images/ruphinette.jpg" alt="Ruphinette KISENGO">
+            <div class="card-content">
+                <h3>Ruphinette KISENGO</h3>
+            </div>
+        </a>
+
+        <a href="etudiants/ruphinette.html" class="memoire-card" data-professeur="Professeur KAFUNDA" data-sujet="Base de donnés réparties">
+            <img src="images/ruphinette.jpg" alt="Ruphinette KISENGO">
+            <div class="card-content">
+                <h3>Ruphinette KISENGO</h3>
+            </div>
+        </a>
+
+        <a href="etudiants/ruphinette.html" class="memoire-card" data-professeur="Dr. Martin" data-sujet="Numérique et éducation">
+            <img src="images/ruphinette.jpg" alt="Ruphinette KISENGO">
+            <div class="card-content">
+                <h3>Ruphinette KISENGO</h3>
+            </div>
+        </a>
+
+        
+        <!-- Ajouter ici d'autres étudiants -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DEFENSE MEMOIRES L3 MATH-INFO. Tous droits réservés. DeezerCode</p>
+    </footer>
+
+    <!-- JavaScript pour filtrage -->
+    <script>
+        const professeurFilter = document.getElementById('professeur-filter');
+        const sujetFilter = document.getElementById('sujet-filter');
+        const cards = document.querySelectorAll('.memoire-card');
+
+        function filterCards() {
+            const prof = professeurFilter.value;
+            const sujet = sujetFilter.value;
+
+            cards.forEach(card => {
+                const cardProf = card.dataset.professeur;
+                const cardSujet = card.dataset.sujet;
+
+                const matchesProf = !prof || cardProf === prof;
+                const matchesSujet = !sujet || cardSujet === sujet;
+
+                card.style.display = (matchesProf && matchesSujet) ? 'flex' : 'none';
+            });
+        }
+
+        professeurFilter.addEventListener('change', filterCards);
+        sujetFilter.addEventListener('change', filterCards);
+    </script>
+</body>
+</html>
